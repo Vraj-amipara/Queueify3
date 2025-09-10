@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    --color: rgba(20, 104, 13, 0.103);
+    height: 250px;
+
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+
+    &:hover {
+        &::before {
+            transform: translateX(-50%) translateY(50%) scaleX(1.5) scaleY(2);
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0%;
+        width: 80%;
+        height: 40%;
+        left: 50%;
+        background: linear-gradient(90deg, #ffd61e41, #178a0175);
+        filter: blur(20px);
+        border-radius: 50%;
+        transform: translateX(-50%) translateY(50%) scaleX(1.5);
+        transition: transform 0.8s ease;
+    }
+}
+
+
+body {
+    background-color: #000000;
+    /* margin: 20px; */
+}
+
+.logo {
+    color: white;
+}
+
+header {
+
+    display: flex;
+    height: 100px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1b1b1b;
+
+}
+
+.manu_bar {
+    width: 40;
+}
+
+.manu_bar ul {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+    z-index: 10;
+}
+
+.manu_bar ul li {
+    display: flex;
+    justify-content: center;
+    /* width: 5vw; */
+    align-items: center;
+}
+
+
+.manu_bar li a {
+
+    /* margin: 25px; */
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 500;
+    transition: .2s;
+    border-top: 2px solid #1b1b1b;
+    border-bottom: 2px solid #1b1b1b;
+    transition: .2s;
+}
+
+.manu_bar li a:hover {
+    color: rgb(214, 200, 0);
+}
+
+
+.icon i {
+    color: white;
+    margin: 10px;
+    font-size: 25px;
+}
+
+@media screen and (max-width:768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+    }
+
+
+    .manu_bar ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        list-style: none;
+    }
+
+    .manu_bar li a {
+        margin: 10px;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .icon i {
+        color: white;
+        margin: 10px;
+        font-size: 20px;
+    }
+
+}
+
+.ticket_buy_img {
+    display: flex;
+    color: white;
+}
+
+.content {
+    width: 60%;
+    padding: 50px;
+}
+
+.imgge {
+    width: 50%;
+}
+
+.imgge img {
+    width: 100%;
+    height: 100%;
+}
+
+span {
+    font-size: 50px;
+    color: wheat;
+    font-weight: 400;
+}
+
+.content h2 {
+    font-size: 50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form .input_1 {
+    color: #ffffff;
+    justify-content: center;
+    /* gap: 400px;   */
+    /* padding: 15px 166px; */
+    width: 92%;
+    height: 25px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #575757;
+    background-color: #282828;
+}
+
+.first_date input {
+    color: rgb(255, 255, 255);
+}
+
+.first_date .input_1 {
+    margin-top: 20px;
+}
+
+.sec_date .input_1 {
+    margin-top: 20px;
+}
+
+.sum_text {
+    display: flex;
+    gap: 20px;
+}
+
+.first_date {
+    width: 47%;
+
+}
+
+.sec_date {
+    width: 47%;
+}
+
+.BOOK_NOW {
+    width: 230px;
+    padding: 20px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 700;
+    background: linear-gradient(to right, #fc4b1a9c, #f7b633ab);
+    color: white;
+}
+
+.checkbox_flex {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    width: 45%;
+    /* justify-content: flex-start; */
+}
+
+.input_2 {
+    width: 20px;
+    margin-right: 20px;
+}
+
+.label2 {
+    width: 30%;
+    margin-right: 30px;
+}
+
+
+@media screen and (max-width:768px) {
+    .manu_bar_sec li a {
+        text-decoration: none;
+        border: none;
+        font-size: 14px;
+        font-weight: 400;
+        border-radius: 5px;
+        color: rgb(0, 0, 0);
+        padding: 10px 20px;
+        background-color: rgba(54, 54, 54, 0.849);
+        color: white;
+    }
+}
+
+
+@media screen and (max-width:1300px) {
+    .content {
+        width: 100%;
+        padding: 50px;
+    }
+
+    .imgge {
+        width: 0%;
+    }
+
+    .imgge img {
+        width: 100%;
+        height: 110%;
+        display: none;
+    }
+}

@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    --color: rgba(20, 104, 13, 0.103);
+    height: 250px;
+
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+
+    &:hover {
+        &::before {
+            transform: translateX(-50%) translateY(50%) scaleX(1.5) scaleY(2);
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0%;
+        width: 80%;
+        height: 40%;
+        left: 50%;
+        background: linear-gradient(90deg, #ffd61e41, #178a0175);
+        filter: blur(20px);
+        border-radius: 50%;
+        transform: translateX(-50%) translateY(50%) scaleX(1.5);
+        transition: transform 0.8s ease;
+    }
+}
+
+
+body {
+    background-color: #000000;
+    /* margin: 20px; */
+}
+
+
+
+.logo {
+    color: white;
+}
+
+header {
+
+    display: flex;
+    height: 100px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1b1b1b;
+
+}
+
+.manu_bar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.manu_bar ul li {
+    display: flex;
+    justify-content: center;
+    width: 5vw;
+    align-items: center;
+}
+
+
+.manu_bar li a {
+
+    /* margin: 25px; */
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 500;
+    transition: .2s;
+    border-top: 2px solid #1b1b1b;
+    border-bottom: 2px solid #1b1b1b;
+}
+
+
+.manu_bar li a:hover {
+    padding: 5px 20px;
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+    margin: 25px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.icon i {
+    color: white;
+    margin: 10px;
+    font-size: 25px;
+}
+
+.fa-linkedin:hover{
+    color: rgb(65, 134, 190);
+    
+}
+
+.fa-instagram:hover{
+    color: rgb(65, 134, 190);
+    
+}
+
+
+@media screen and (max-width:768px) {
+    header {
+         flex-direction: column;
+        align-items: center;
+        justify-content:center ;
+        height: 400px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #1b1b1b;
+
+    }
+
+
+    .manu_bar ul {
+         flex-direction: column;
+        align-items: center;
+        justify-content:center ;
+        display: flex;
+        list-style: none;
+    }
+
+    .manu_bar li a {
+        
+        margin: 0px;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .icon i {
+        color: white;
+        margin: 10px;
+        font-size: 20px;
+    }
+
+
+
+}
+
+/* header-2--------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.header_tow {
+    background-color: rgba(54, 54, 54, 0.849);
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.manu_bar_sec {
+    display: flex;
+    margin: 20px;
+
+    /* flex-wrap: wrap; */
+}
+
+.manu_bar_sec ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    gap: 100px;
+}
+
+.manu_bar_sec li a {
+    text-decoration: none;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 18px;
+    color: rgb(148, 148, 148);
+    padding: 15px 0px;
+    transition: all .3s;
+    /* background-color: #393E46; */
+    /* background: linear-gradient(to right, #243553); */
+
+}
+
+.manu_bar_sec li a:hover {
+    overflow: hidden;
+    font-size: 17px;
+    text-decoration: none;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    color: rgb(214, 200, 0);
+    /* background-color: #393E46; */
+    /* background: linear-gradient(to right, #243553); */
+
+}
+
+@media screen and (max-width:768px) {
+
+    .manu_bar_sec ul {
+
+        gap: 50px;
+    }
+
+    .manu_bar_sec li a {
+        text-decoration: none;
+        border: none;
+        width: 100%;
+        font-size: 10px;
+        font-weight: 400;
+        border-radius: 5px;
+        color: rgb(0, 0, 0);
+
+        background-color: rgba(54, 54, 54, 0.849);
+        color: white;
+    }
+}
